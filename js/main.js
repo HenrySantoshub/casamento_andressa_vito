@@ -294,30 +294,37 @@ el.innerHTML = esc(val);
     onScroll();
 
     // Menu mobile
+    function closeMenu() {
+      if (toggle) toggle.setAttribute('aria-expanded', 'false');
+      if (toggle) toggle.setAttribute('aria-label', 'Abrir menu');
+      nav.classList.remove('is-open');
+      header.classList.remove('is-menu-open');
+    }
+    function openMenu() {
+      if (toggle) toggle.setAttribute('aria-expanded', 'true');
+      if (toggle) toggle.setAttribute('aria-label', 'Fechar menu');
+      nav.classList.add('is-open');
+      header.classList.add('is-menu-open');
+    }
     if (toggle) {
       toggle.addEventListener('click', () => {
         const open = toggle.getAttribute('aria-expanded') === 'true';
-        toggle.setAttribute('aria-expanded', String(!open));
-        toggle.setAttribute('aria-label', open ? 'Abrir menu' : 'Fechar menu');
-        nav.classList.toggle('is-open', !open);
+        open ? closeMenu() : openMenu();
       });
       document.addEventListener('click', (e) => {
         if (nav.classList.contains('is-open') && !nav.contains(e.target) && !toggle.contains(e.target)) {
-          toggle.setAttribute('aria-expanded', 'false');
-          nav.classList.remove('is-open');
+          closeMenu();
         }
       });
       document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape' && nav.classList.contains('is-open')) {
-          toggle.setAttribute('aria-expanded', 'false');
-          nav.classList.remove('is-open');
+          closeMenu();
         }
       });
     }
     links.forEach((l) => {
       l.addEventListener('click', () => {
-        toggle.setAttribute('aria-expanded', 'false');
-        nav.classList.remove('is-open');
+        closeMenu();
       });
     });
   }
@@ -504,17 +511,49 @@ el.innerHTML = esc(val);
     };
     if (!els.d) return;
 
+    // Offset entre o relógio confiável (servidor/navegador) e o relógio do
+    // sistema. Se não houver serviço de tempo, assume 0 (usa Date.now()).
+    let clockOffset = 0;
+
+    function nowMs() { return Date.now() + clockOffset; }
+
     function pad(n) { return String(Math.max(0, n)).padStart(2, '0'); }
 
+    function schedule(next) {
+      setTimeout(tick, Math.max(0, next - Date.now()));
+    }
+
     function tick() {
-      const diff = Math.max(0, target - Date.now());
+      const now = nowMs();
+      const diff = Math.max(0, target - now);
       els.d.textContent = pad(Math.floor(diff / 86400000));
       els.h.textContent = pad(Math.floor(diff / 3600000) % 24);
       els.m.textContent = pad(Math.floor(diff / 60000) % 60);
       els.s.textContent = pad(Math.floor(diff / 1000) % 60);
+      if (diff > 0) {
+        schedule(now - (now % 1000) + 1000 - clockOffset);
+      }
     }
-    tick();
-    setInterval(tick, 1000);
+
+    // Sincroniza com o relógio confiável do servidor através do cabeçalho
+    // "Date" da resposta, corrigindo o relógio do sistema se estiver errado.
+    function syncWithServer() {
+      if (!('fetch' in window)) { tick(); return; }
+      Promise.resolve(fetch(location.pathname, { method: 'HEAD', cache: 'no-store' }))
+        .then((res) => {
+          const serverTime = res.headers && res.headers.get('Date');
+          if (!serverTime) { tick(); return; }
+          const serverMs = Date.parse(serverTime);
+          if (isNaN(serverMs)) { tick(); return; }
+          const before = Date.now();
+          const network = (Date.now() - before) / 2;
+          clockOffset = serverMs + network - Date.now();
+          tick();
+        })
+        .catch(() => tick());
+    }
+
+    syncWithServer();
   }
 
   function formatCalendarDate(iso) {

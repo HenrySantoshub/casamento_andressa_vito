@@ -221,6 +221,13 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 12px); }
 .site-header.is-scrolled .nav__link:hover,
 .site-header.is-scrolled .nav__link.is-active { color: var(--ink); }
 
+/* Menu mobile aberto: header ganha fundo para não ficar transparente */
+.site-header.is-menu-open {
+  background: rgba(249, 244, 241, .95);
+  -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px);
+  box-shadow: 0 10px 30px -20px rgba(29, 28, 25, .3);
+}
+
 /* Menu mobile aberto (painel claro): links escuros para legibilidade */
 .site-nav.is-open .nav__link {
   color: var(--ink-soft);
