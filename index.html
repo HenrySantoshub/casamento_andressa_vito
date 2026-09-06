@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ==================== SEO BÁSICO ==================== -->
+  <title>Andressa & Vito — 08 de Dezembro de 2026</title>
+  <meta name="description"
+    content="Conheça a história de Andressa & Vito e confirme sua presença no casamento em 08 de Dezembro de 2026, no Espaço La Forêt, em São Roque. Lista de presentes, recados, local e informações da cerimônia." />
+  <meta name="theme-color" content="#FBF8F2" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Andressa & Vito — Casamento 08.12.2026" />
+  <meta property="og:description"
+    content="Estamos esperando por você! Confirme sua presença e acompanhe todos os detalhes da nossa celebração no Espaço La Forêt, São Roque." />
+  <meta property="og:locale" content="pt_BR" />
+
+  <!-- Favicon (monograma em SVG inline) -->
+  <link rel="icon"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231D1C19'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='28' fill='%23F9F4F1' text-anchor='middle'%3EA%20%26%20V%3C/text%3E%3C/svg%3E" />
+
+  <!-- ==================== FONTES ==================== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Poppins:wght@300;400;500;600&display=swap"
+    rel="stylesheet" />
+
+  <!-- ==================== ESTILOS ==================== -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+  <!-- ==================== PRÉ-LOADER ==================== -->
+  <div class="preloader" id="preloader" aria-hidden="true">
+    <div class="preloader__inner">
+      <img class="preloader__logo" src="img/LOGO-PRETO.png" alt="A & V" />
+      <span class="preloader__line"></span>
+    </div>
+  </div>
+
+  <!-- ==================== LINK PULAR PARA CONTEÚDO (ACESSIBILIDADE) ==================== -->
+  <a class="skip-link" href="#inicio">Pular para o conteúdo</a>
+
+  <!-- ==================== INDICADOR DE PROGRESSO DA ROLAGEM ==================== -->
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"><span></span></div>
+
+  <!-- ==================== HEADER FIXO ==================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header__inner">
+      <a class="header__logo" href="#inicio" aria-label="Voltar ao início">
+        <img class="header__logo-img" src="img/logo-A&V.png" alt="A & V" />
+      </a>
+
+      <nav class="site-nav" id="siteNav" aria-label="Navegação principal">
+        <ul class="nav__list">
+          <li><a class="nav__link is-active" href="#inicio">Home</a></li>
+          <li><a class="nav__link" href="#casal">Sobre o Casal</a></li>
+          <li><a class="nav__link" href="#paleta">Casamento</a></li>
+          <li><a class="nav__link" href="#presentes">Lista de Presentes</a></li>
+          <li><a class="nav__link" href="#recados">Recados</a></li>
+          <li><a class="nav__link" href="#rsvp">Confirmar Presença</a></li>
+        </ul>
+      </nav>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="siteNav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="conteudo">
+
+    <!-- ==================== HERO (100% DA TELA) ==================== -->
+    <section class="hero" id="inicio">
+      <div class="hero__bg" id="heroBg" role="img" aria-label="Foto do Casal Andressa e Vito">
+        <img src="" alt="" data-config-img="hero.photo" loading="eager" fetchpriority="high" />
+      </div>
+      <div class="hero__overlay"></div>
+
+      <div class="hero__content">
+        <img class="hero__logo-img" src="img/LOGO-BRANCO.png" alt="A & V" />
+        <h1 class="hero__title"><span data-config="couple.shortNames"></span></h1>
+        <p class="hero__quote" data-config="hero.quoteLine"></p>
+        <p class="hero__date">
+          <span class="hero__date-sep" aria-hidden="true">✦</span>
+          <span data-config="wedding.dateDisplay"></span>
+          <span class="hero__date-sep" aria-hidden="true">✦</span>
+        </p>
+        <a class="btn btn--light hero__cta" href="#mensagem" data-config-attr="text:hero.button"></a>
+      </div>
+
+      <a class="hero__scroll" href="#mensagem" aria-label="Rolar para a próxima seção">
+        <span class="hero__scroll-dot"></span>
+      </a>
+    </section>
+
+    <!-- ==================== SEÇÃO 2 — MENSAGEM DO CASAL ==================== -->
+    <section class="section message" id="mensagem">
+      <div class="container">
+        <div class="message__grid">
+          <div class="message__text reveal">
+            <p class="kicker" data-config="message.kicker"></p>
+            <h2 class="section-title" data-config="message.title"></h2>
+            <p class="message__p" data-config-foreach="message.text"></p>
+            <span class="message__sig-before">Com Amor,</span>
+            <span class="message__signature" data-config="couple.names"></span>
+          </div>
+          <figure class="message__media reveal">
+            <img data-config-img="message.photo" alt="Foto do casal Mariana e Lucas" loading="lazy" />
+            <figcaption data-config="message.photoCaption"></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SEÇÃO 3 — SOBRE O CASAL ==================== -->
+    <section class="section couple" id="casal">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="kicker" data-config="coupleSection.kicker"></p>
+          <h2 class="section-title" data-config="coupleSection.title"></h2>
+        </header>
+
+        <div class="couple__cards">
+          <!-- Cards (rendered via JS) -->
+          <article class="couple-card reveal" id="coupleCard1"></article>
+          <article class="couple-card reveal" id="coupleCard2"></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SEÇÃO 4 — LINHA DO TEMPO ==================== -->
+    <section class="section timeline" id="timeline">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="kicker" data-config="timeline.kicker"></p>
+          <h2 class="section-title" data-config="timeline.title"></h2>
+        </header>
+
+        <ol class="timeline__list" id="timelineList"><!-- rendered via JS --></ol>
+      </div>
+    </section>
+
+    <!-- ==================== SEÇÃO 5 — FRASE DO CASAL ==================== -->
+    <section class="section phrase" id="frase">
+      <div class="container">
+        <blockquote class="phrase__block reveal">
+          <span class="phrase__quote-mark" aria-hidden="true">“</span>
+          <p class="phrase__text" data-config="quote.text"></p>
+          <cite class="phrase__author" data-config="quote.author"></cite>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- ==================== SEÇÃO 6 — GALERIA MASONRY ==================== -->
+    <section class="section gallery" id="galeria">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="kicker" data-config="gallery.kicker"></p>
+          <h2 class="section-title" data-config="gallery.title"></h2>
+        </header>
+        <div class="gallery__masonry" id="galleryGrid"><!-- rendered via JS --></div>
+      </div>
+    </section>
+
+    <!-- ==================== SEÇÃO 7 — MÚSICA DO CASAL ==================== -->
+    <section class="section music" id="musica">
+      <div class="container">
+        <div class="music__card reveal" id="musicCard">
+          <header class="section__head music__head">
+            <p class="kicker" data-config="music.kicker"></p>
+            <h2 class="section-title" data-config="music.title"></h2>
+          </header>
+
+          <div class="music__body">
+            <div class="music__art" aria-hidden="true">
+              <span class="music__note">♪</span>
+              <span class="music__vinyl"></span>
+            </div>
+
+            <div class="music__info">
+              <p class="music__text" data-config="music.text"></p>
+
+              <!-- Player de áudio customizado -->
+              <div class="player" id="audioPlayer">
+                <audio id="audioEl" preload="metadata"></audio>
+                <div class="player__row">
+                  <button class="player__toggle" id="audioPlay" aria-label="Tocar música"></button>
+                  <div class="player__bar">
+                    <div class="player__track"><span class="player__fill" id="audioFill"></span></div>
+                    <div class="player__times">
+                      <span id="audioCurrent">0:00</span>
+                      <span data-config="music.trackTitle"></span>
+                      <span id="audioDuration">0:00</span>
+                    </div>
+                  </div>
+                </div>
+                <p class="player__empty-note" id="audioNote"></p>
+              </div>
+
+              <a class="btn btn--gold" href="#" target="_blank" rel="noopener" data-config-attr="href:music.spotifyUrl">
+                <span class="btn__icon" data-icon="spotify"></span>
+                Ouvir no Spotify
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SEÇÃO 8 — PALETA DO CASAMENTO ==================== -->
+    <section class="section palette" id="paleta">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="kicker" data-config="palette.kicker"></p>
+          <h2 class="section-title" data-config="palette.title"></h2>
+          <p class="section__note" data-config="palette.note"></p>
+        </header>
+
+        <div class="palette__groups" id="paletteGroups"><!-- rendered via JS --></div>
+      </div>
+    </section>
+
+    <!-- ==================== SEÇÃO 9 — LOCAL ==================== -->
+    <section class="section venue" id="local">
+      <div class="container">
+        <div class="venue__grid">
+          <div class="venue__map reveal">
+            <iframe id="venueMap" title="Mapa do local da cerimônia" loading="lazy" allowfullscreen
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+
+          <div class="venue__info reveal">
+            <p class="kicker" data-config="venue.kicker"></p>
+            <h2 class="section-title" data-config="venue.title"></h2>
+
+            <dl class="venue__list">
+              <div class="venue__item">
+                <dt><span class="venue__icon" data-icon="map-pin"></span> Local</dt>
+                <dd data-config="venue.name"></dd>
+              </div>
+              <div class="venue__item">
+                <dt><span class="venue__icon" data-icon="home"></span> Endereço</dt>
+                <dd data-config="venue.address"></dd>
+              </div>
+              <div class="venue__item">
+                <dt><span class="venue__icon" data-icon="user"></span> Cidade</dt>
+                <dd data-config="venue.city"></dd>
+              </div>
+              <div class="venue__item">
+                <dt><span class="venue__icon" data-icon="clock"></span> Horário</dt>
+                <dd data-config="venue.time"></dd>
+              </div>
+            </dl>
+
+            <ul class="venue__info-list">
+              <li data-config-foreach="venue.info" data-icon="check"></li>
+            </ul>
+
+            <a class="btn btn--gold btn--lg" href="#" target="_blank" rel="noopener"
+              data-config-attr="href:venue.mapsUrl">
+              <span class="btn__icon" data-icon="map-pin"></span>
+              <span data-config="venue.button"></span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SEÇÃO 10 — CERIMÔNIA ==================== -->
+    <section class="section ceremony" id="cerimonia">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="kicker" data-config="ceremony.kicker"></p>
+          <h2 class="section-title" data-config="ceremony.title"></h2>
+        </header>
+
+        <div class="ceremony__grid">
+          <figure class="ceremony__photo reveal">
+            <img data-config-img="ceremony.photo" alt="Foto do local da cerimônia" loading="lazy" />
+            <figcaption data-config="ceremony.photoCaption"></figcaption>
+          </figure>
+
+          <div class="ceremony__cards" id="ceremonyCards"><!-- rendered via JS --></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SEÇÃO 11 — LISTA DE PRESENTES ==================== -->
+    <section class="section gifts" id="presentes">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="kicker" data-config="gifts.kicker"></p>
+          <h2 class="section-title" data-config="gifts.title"></h2>
+          <p class="section__note" data-config="gifts.note"></p>
+        </header>
+
+        <div class="gifts__grid" id="giftsGrid"><!-- rendered via JS --></div>
+      </div>
+    </section>
+
+    <!-- ==================== SEÇÃO 12 — CONFIRMAR PRESENÇA (RSVP) ==================== -->
+    <section class="section rsvp" id="rsvp">
+      <div class="container container--narrow">
+        <header class="section__head reveal">
+          <p class="kicker" data-config="rsvp.kicker"></p>
+          <h2 class="section-title" data-config="rsvp.title"></h2>
+          <p class="section__note section__note--accent rsvp__deadline" data-config="rsvp.deadline"></p>
+        </header>
+
+        <!-- Formulário -->
+        <form class="rsvp__form card reveal" id="rsvpForm" novalidate>
+          <div class="form__row">
+            <div class="form__field">
+              <label for="rsvp-name">Nome *</label>
+              <input type="text" id="rsvp-name" name="nome" autocomplete="given-name" placeholder="Seu nome" required />
+            </div>
+            <div class="form__field">
+              <label for="rsvp-lastname">Sobrenome *</label>
+              <input type="text" id="rsvp-lastname" name="sobrenome" autocomplete="family-name"
+                placeholder="Seu sobrenome" required />
+            </div>
+          </div>
+
+          <div class="form__row">
+            <div class="form__field">
+              <label for="rsvp-phone">Telefone *</label>
+              <input type="tel" id="rsvp-phone" name="telefone" autocomplete="tel" placeholder="(11) 99999-0000"
+                required />
+            </div>
+            <div class="form__field">
+              <label for="rsvp-email">E-mail *</label>
+              <input type="email" id="rsvp-email" name="email" autocomplete="email" placeholder="voce@email.com"
+                required />
+            </div>
+          </div>
+
+          <fieldset class="form__fieldset">
+            <legend>Confirmará presença? *</legend>
+            <div class="form__segmented" role="radiogroup" aria-label="Resposta de presença" id="rsvpAttending">
+              <label class="form__choice">
+                <input type="radio" name="presenca" value="sim" required />
+                <span>Sim, com alegria!</span>
+              </label>
+              <label class="form__choice">
+                <input type="radio" name="presenca" value="nao" required />
+                <span>Não poderei ir</span>
+              </label>
+            </div>
+          </fieldset>
+
+          <div class="form__field">
+            <label for="rsvp-guests">Quantidade de acompanhantes</label>
+            <select id="rsvp-guests" name="acompanhantes">
+              <option value="0">Nenhum</option>
+              <option value="1">1 acompanhante</option>
+              <option value="2">2 acompanhantes</option>
+              <option value="3">3 acompanhantes</option>
+              <option value="4">4 acompanhantes</option>
+            </select>
+          </div>
+
+          <div class="form__field">
+            <label for="rsvp-diet">Restrições alimentares</label>
+            <input type="text" id="rsvp-diet" name="restricoes"
+              placeholder="Ex.: Vegetariano, alérgico a frutos do mar…" />
+          </div>
+
+          <div class="form__field">
+            <label for="rsvp-message">Mensagem opcional</label>
+            <textarea id="rsvp-message" name="mensagem" rows="3"
+              placeholder="Deixe um carinho para os noivos…"></textarea>
+          </div>
+
+          <button class="btn btn--gold btn--lg btn--block" type="submit">
+            <span class="btn__icon" data-icon="heart"></span>
+            <span data-config="rsvp.button"></span>
+          </button>
+
+          <p class="form__feedback form__feedback--success" id="rsvpSuccess" role="status" hidden></p>
+        </form>
+      </div>
+    </section>
+
+    <!-- ==================== SEÇÃO 13 — RECADOS ==================== -->
+    <section class="section messages" id="recados">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="kicker" data-config="messages.kicker"></p>
+          <h2 class="section-title" data-config="messages.title"></h2>
+          <p class="section__note" data-config="messages.text"></p>
+        </header>
+
+        <div class="messages__layout">
+          <form class="messages__form reveal" id="messageForm" novalidate>
+            <div class="form__field">
+              <label for="msg-name">Seu nome *</label>
+              <input type="text" id="msg-name" name="nome" placeholder="Seu nome" required />
+            </div>
+            <div class="form__field">
+              <label for="msg-text">Mensagem *</label>
+              <textarea id="msg-text" name="mensagem" rows="4" data-config-attr="placeholder:messages.placeholder"
+                required maxlength="500"></textarea>
+              <span class="form__counter" id="msgCounter">0 / 500</span>
+            </div>
+            <button class="btn btn--gold" type="submit">
+              <span class="btn__icon" data-icon="send"></span>
+              <span data-config="messages.sendButton"></span>
+            </button>
+          </form>
+
+          <div class="messages__wall reveal" id="messagesWall"><!-- rendered via JS --></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SEÇÃO 14 — CONTAGEM REGRESSIVA ==================== -->
+    <section class="section countdown" id="countdown">
+      <div class="container container--narrow">
+        <header class="section__head reveal">
+          <p class="kicker" data-config="countdown.kicker"></p>
+          <h2 class="section-title" data-config="countdown.title"></h2>
+        </header>
+
+        <div class="countdown__board reveal" id="countdownBoard" aria-live="polite">
+          <div class="countdown__unit"><strong id="cdDays">00</strong><span>Dias</span></div>
+          <div class="countdown__unit"><strong id="cdHours">00</strong><span>Horas</span></div>
+          <div class="countdown__unit"><strong id="cdMinutes">00</strong><span>Minutos</span></div>
+          <div class="countdown__unit"><strong id="cdSeconds">00</strong><span>Segundos</span></div>
+        </div>
+
+        <p class="countdown__note" data-config="countdown.calendarNote"></p>
+        <button class="btn btn--light btn--lg" id="saveCalendarBtn" type="button">
+          <span class="btn__icon" data-icon="calendar"></span>
+          <span data-config="countdown.button"></span>
+        </button>
+
+        <div class="countdown__date" data-config="wedding.dateDisplay"></div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="site-footer" id="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <img class="footer__logo-img" src="img/LOGO-BRANCO.png" alt="A & V" />
+        <p class="footer__names" data-config="couple.names"></p>
+        <p class="footer__date" data-config="wedding.dateDisplay"></p>
+        <p class="footer__thanks" data-config="footer.thanks"></p>
+
+        <ul class="footer__social" id="footerSocial"><!-- rendered via JS --></ul>
+
+        <div class="footer__bottom">
+          <p class="footer__made" data-config="footer.madeBy"></p>
+          <p class="footer__copy">© <span id="footerYear"></span> <span data-config="footer.copyrightName"></span> —
+            Todos os direitos reservados.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== BOTÃO VOLTAR AO TOPO ==================== -->
+  <button class="back-to-top" id="backToTop" aria-label="Voltar ao topo">
+    <span data-icon="arrow-up"></span>
+  </button>
+
+  <!-- ==================== LIGHTBOX ==================== -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Visualização da foto" hidden>
+    <button class="lightbox__close" id="lightboxClose" aria-label="Fechar">
+      <span data-icon="x"></span>
+    </button>
+    <button class="lightbox__nav lightbox__nav--prev" id="lightboxPrev" aria-label="Foto anterior">
+      <span data-icon="arrow-left"></span>
+    </button>
+    <figure class="lightbox__figure">
+      <img id="lightboxImg" src="" alt="" />
+      <figcaption id="lightboxCaption"></figcaption>
+    </figure>
+    <button class="lightbox__nav lightbox__nav--next" id="lightboxNext" aria-label="Próxima foto">
+      <span data-icon="arrow-right"></span>
+    </button>
+  </div>
+
+  <!-- ==================== SCRIPTS ==================== -->
+  <script src="js/config.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
