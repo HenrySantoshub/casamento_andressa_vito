@@ -174,7 +174,7 @@ window.WEDDING_CONFIG = {
   music: {
     kicker: 'Trilha sonora',
     title: 'A Música do Casal',
-    trackTitle: 'Valsa dos Nossos Corações',
+    trackTitle: 'Perfect — Ed Sheeran',
     trackArtist: 'Playlist de Andressa & Vito',
     /* Defina uma URL de áudio (mp3) para habilitar o player demonstração */
     audioSrc: 'Ed Sheeran - Perfect.mp3',
