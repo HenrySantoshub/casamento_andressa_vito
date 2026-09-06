@@ -157,12 +157,14 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 12px); }
   z-index: 1000; height: var(--header-h);
   display: flex; align-items: center;
   transition: background .4s var(--ease), box-shadow .4s var(--ease),
-              height .4s var(--ease), backdrop-filter .4s var(--ease);
+              height .4s var(--ease);
 }
+/* Header com fundo claro (após rolar): links voltam ao tom escuro para contraste */
+/* NOTA: sem backdrop-filter aqui — o backdrop-filter criaria um novo containing
+   block que quebra o position:fixed do painel lateral .site-nav no mobile. */
 .site-header.is-scrolled {
   background: #F9F4F1;
   background: rgba(249, 244, 241, .95);
-  -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px);
   box-shadow: 0 10px 30px -20px rgba(29, 28, 25, .3);
   height: 70px;
 }
@@ -222,11 +224,11 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 12px); }
 .site-header.is-scrolled .nav__link:hover,
 .site-header.is-scrolled .nav__link.is-active { color: var(--ink); }
 
-/* Menu mobile aberto: header ganha fundo para não ficar transparente */
+/* Menu mobile aberto: header ganha fundo para não ficar transparente.
+   Sem backdrop-filter (evita containing block que quebraria o .site-nav fixed). */
 .site-header.is-menu-open {
   background: #F9F4F1;
   background: rgba(249, 244, 241, .97);
-  -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px);
   box-shadow: 0 10px 30px -20px rgba(29, 28, 25, .3);
 }
 
