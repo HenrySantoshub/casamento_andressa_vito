@@ -160,7 +160,8 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 12px); }
               height .4s var(--ease), backdrop-filter .4s var(--ease);
 }
 .site-header.is-scrolled {
-  background: rgba(249, 244, 241, .82);
+  background: #F9F4F1;
+  background: rgba(249, 244, 241, .95);
   -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px);
   box-shadow: 0 10px 30px -20px rgba(29, 28, 25, .3);
   height: 70px;
@@ -223,7 +224,8 @@ section[id] { scroll-margin-top: calc(var(--header-h) + 12px); }
 
 /* Menu mobile aberto: header ganha fundo para não ficar transparente */
 .site-header.is-menu-open {
-  background: rgba(249, 244, 241, .95);
+  background: #F9F4F1;
+  background: rgba(249, 244, 241, .97);
   -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px);
   box-shadow: 0 10px 30px -20px rgba(29, 28, 25, .3);
 }
